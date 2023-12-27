@@ -10,7 +10,7 @@ interface Props {
 
 const PlatfromSelector = ({ onselectplatfrom, selectedPlatfrom }: Props) => {
   const { data, error } = usePlatfroms();
-  console.log("calling from platfrom icon list", data);
+
   if (error) return null;
   return (
     <Menu>

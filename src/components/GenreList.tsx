@@ -17,7 +17,7 @@ interface Props {
 
 const GenreNewList = ({ selectedGenre, onSelectGenre }: Props) => {
   const { data, error, isLoading } = UseGenreList();
-  console.log("this is from api new clinet", data);
+
   if (error) return null;
   if (isLoading) return <Spinner />;
   return (
