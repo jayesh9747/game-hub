@@ -10,14 +10,16 @@ import {
 } from "@chakra-ui/react";
 import useGenres, { Genre } from "../hooks/useGenres";
 import getCropImgageUrl from "../services/image-url";
+import UseGenreList from "../hooks/useGenres";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
   selectedGenre: Genre | null;
 }
 
-const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
-  const { data, isLoading, error } = useGenres();
+const GenreNewList = ({ selectedGenre, onSelectGenre }: Props) => {
+  const { data, error, isLoading } = UseGenreList();
+  console.log("this is from api new clinet", data);
   if (error) return null;
   if (isLoading) return <Spinner />;
   return (
@@ -26,7 +28,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
         Genres
       </Heading>
       <List>
-        {data.map((genre) => (
+        {data?.results.map((genre: Genre) => (
           <ListItem key={genre.id} paddingY={1}>
             <HStack>
               <Image
@@ -55,4 +57,4 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
   );
 };
 
-export default GenreList;
+export default GenreNewList;
