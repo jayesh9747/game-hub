@@ -5,9 +5,9 @@ import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import { Genre } from "./hooks/useGenres";
 import { Platform } from "./hooks/usePlatforms";
-import PlatfromSelector from "./components/PlatfromSelector";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
+import PlatfromSelector from "./components/PlatfromSelector";
 
 export interface Gamequery {
   genre: Genre | null;
