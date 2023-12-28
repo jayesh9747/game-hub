@@ -46,7 +46,7 @@ const App = () => {
             <Box paddingX={1}>
               <PlatformSelector
                 selectedPlatform={gameQuery.platform}
-                onselectplatfrom={(platform) =>
+                onselectplatform={(platform) =>
                   setgameQuery({ ...gameQuery, platform })
                 }
               />
