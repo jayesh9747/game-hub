@@ -8,10 +8,7 @@ interface Props {
   selectedPlatform: Platform | null;
 }
 
-const PlatformSelector = ({
-  onselectplatform,
-  selectedPlatform: selectedPlatform,
-}: Props) => {
+const PlatformSelector = ({ onselectplatform, selectedPlatform: selectedPlatform }: Props) => {
   const { data, error } = usePlatforms();
 
   if (error) return null;

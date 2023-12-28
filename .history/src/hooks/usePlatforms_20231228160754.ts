@@ -1,4 +1,4 @@
-import apiService, { FetchResponse } from "../services/api-service";
+import { FetchResponse } from "../services/api-service";
 import { useQuery } from "@tanstack/react-query";
 import platforms from "../data/platfroms";
 import apiClient from "../services/api-service";
@@ -11,7 +11,7 @@ export interface Platform {
 const ApiClient = new apiClient<Platform>('/platforms/lists/parents');
 
 
-const usePlatfroms = () => {
+const usePlatforms = () => {
     return useQuery({
         queryKey: ['platforms'],
         queryFn: ApiClient.getAll,
@@ -20,4 +20,4 @@ const usePlatfroms = () => {
     });
 }
 
-export default usePlatfroms;
+export default usePlatforms;

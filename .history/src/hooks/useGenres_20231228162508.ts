@@ -14,7 +14,7 @@ const UseGenreList = () => {
         queryKey: ['genres'],
         queryFn: Apiservices.getAll,
         staleTime: 24 * 60 * 60 * 1000,
-        initialData: { count: genres.length, results: genres }
+        initialData: { count: genres.length,next:, results: genres }
     });
 }
 

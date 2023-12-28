@@ -9,8 +9,8 @@ export interface Genre {
 
 const Apiservices = new apiClient<Genre>('/genres');
 
-const UseGenreList = () => {
-    return useQuery({
+const UseGenreList = () => {\
+     useQuery({
         queryKey: ['genres'],
         queryFn: Apiservices.getAll,
         staleTime: 24 * 60 * 60 * 1000,
