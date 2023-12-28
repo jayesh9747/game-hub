@@ -3,15 +3,10 @@ import axios, { Axios, AxiosRequestConfig } from 'axios';
 
 export interface FetchResponse<T> {
     count: number;
+    next: string | null;
     results: T[];
 }
 
-// export default axios.create({
-//     baseURL: 'https://api.rawg.io/api',
-//     params: {
-//         key: '4b15f191431b4ca290439f94a6468007'
-//     }
-// });
 
 const AxiosInstace = axios.create({
     baseURL: 'https://api.rawg.io/api',
@@ -27,9 +22,9 @@ class apiClient<T> {
         this.endPoint = endPoint;
     }
 
-    getAll = (config : AxiosRequestConfig) => {
+    getAll = (config: AxiosRequestConfig) => {
         return AxiosInstace
-            .get<FetchResponse<T>>(this.endPoint , config)
+            .get<FetchResponse<T>>(this.endPoint, config)
             .then((res) => res.data);
     }
 
