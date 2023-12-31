@@ -1,4 +1,12 @@
-import { Box, Button, Center, Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Flex,
+  SimpleGrid,
+  Spinner,
+  Text,
+} from "@chakra-ui/react";
 import { Gamequery } from "../App";
 import useGames from "../hooks/useGame";
 import GameCard from "./GameCard";
