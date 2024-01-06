@@ -1,5 +1,5 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
-import useGames from "../hooks/useGame";
+import useGames from "../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardContainer from "./GameCardContainer";
 import GameCardSkeleton from "./GameCardSkeleton";
@@ -8,7 +8,6 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import UseGameQueryStore from "../store/useGamestore";
 
 const GameGrid = () => {
-  
   const {
     data,
     error,
