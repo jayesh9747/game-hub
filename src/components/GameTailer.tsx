@@ -1,5 +1,6 @@
 import React from "react";
-import useTrailer from "../hooks/usetrailers";
+import useTrailer from "../hooks/useTrailers";
+
 
 interface Props {
   gameId: number;
