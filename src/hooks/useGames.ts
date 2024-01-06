@@ -3,23 +3,12 @@ import apiService, { FetchResponse } from "../services/api-service";
 import apiClient from "../services/api-service";
 import ms from 'ms';
 import UseGameQueryStore from "../store/useGamestore";
+import { Games } from "../entities/Games";
 
 export interface Platform {
     id: number,
     name: string,
     slug: string
-}
-
-export interface Games {
-    id: number;
-    slug: string;
-    name: string;
-    description_raw: string;
-    background_image: string;
-    parent_platforms: { platform: Platform }[];
-    metacritic: number;
-    rating_top: number;
-
 }
 
 const ApiClient = new apiClient<Games>('/games');
