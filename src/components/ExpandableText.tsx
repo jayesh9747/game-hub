@@ -1,5 +1,4 @@
 import { useStatStyles, Text, Button } from "@chakra-ui/react";
-import { error } from "console";
 import React, { ReactNode, useState } from "react";
 
 interface Props {
@@ -10,7 +9,7 @@ const ExpandableText = ({ children }: Props) => {
   const [expanded, setExpanded] = useState(false);
   const limit = 300;
 
-  if(!children) throw null;
+  if (!children) throw null;
 
   if (children.length <= limit) return <Text>{children}</Text>;
 
